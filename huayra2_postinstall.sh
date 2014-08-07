@@ -7,6 +7,10 @@ rm ich.deb
 echo ACTUALIZANDO FUENTES...
 apt-get clean
 apt-get update
+echo INSTALANDO DRIVERS INTEL
+sudo apt-get install -y intel-classmate-drivers
+sudo apt-get install -y intel-classmate-function-keys
+sudo apt-get install -y intel-pvr-support
 echo MONTANDO DATOS...
 mkdir /media/DATOS
 mount /dev/sda4 /media/DATOS
