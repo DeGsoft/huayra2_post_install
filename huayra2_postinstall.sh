@@ -16,12 +16,12 @@ mkdir /media/DATOS
 mount /dev/sda4 /media/DATOS
 mount /dev/sdb4 /media/DATOS
 echo CREANDO ESTRUCTURA DE DIRECTORIO EN DATOS...
-mkdir /media/DATOS/Mis Cosas
-mkdir /media/DATOS/Mis Cosas/Descargas
-mkdir /media/DATOS/Mis Cosas/Mi música
-mkdir /media/DATOS/Mis Cosas/Mis documentos
-mkdir /media/DATOS/Mis Cosas/Mis imágenes
-mkdir /media/DATOS/Mis Cosas/Mis vídeos
+mkdir /media/DATOS/Mis\ Cosas
+mkdir /media/DATOS/Mis\ Cosas/Descargas
+mkdir /media/DATOS/Mis\ Cosas/Mi\ música
+mkdir /media/DATOS/Mis\ Cosas/Mis\ documentos
+mkdir /media/DATOS/Mis\ Cosas/Mis\ imágenes
+mkdir /media/DATOS/Mis\ Cosas/Mis\ vídeos
 echo EJECUTANDO POST-INSTALL...
 sudo apt-get install -y huayra-postinstall-pci
 echo CREANDO ENLACE CDPEDIA A DATOS...
