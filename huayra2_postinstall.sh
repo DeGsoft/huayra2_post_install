@@ -146,8 +146,8 @@ echo "Agregando elementos de menú al usuario alumno"
 cp -r /usr/share/huayra-postinstall-pci/alumno/.config/* /etc/skel/.config
 cp -r /usr/share/huayra-postinstall-pci/alumno/.local/* /etc/skel/.local
 echo "Agregando elementos de menú al skel de usuarios"
-#!/bin/bash
-
+#
+echo ESCONDIENDO PARTICIONES DE SISTEMA...
 if [ ! -f /etc/udev/rules.d/99-hide-disks.rules ]; then
         touch /etc/udev/rules.d/99-hide-disks.rules
 fi
@@ -161,13 +161,9 @@ grep 'sda5' /etc/udev/rules.d/99-hide-disks.rules > /dev/null
 if [ ! $? -eq 0 ]; then
     echo 'KERNEL=="sda5", ENV{UDISKS_PRESENTATION_HIDE}=1"' >> /etc/udev/rules.d/99-hide-disks.rules
 fi
-
-echo "Escondiendo particiones de Windows y Recuperación"
-
 #
+echo INSTALANDO FLASH...
 update-flashplugin-nonfree --install
-
-echo "Instalando plugin de flash"
 #
 apt-get update
 apt-get install -y intel-classmate-drivers
@@ -183,4 +179,8 @@ sed -i 's/ServerAddress=/ServerAddress=tdserver/g' /etc/theftdeterrent/TDAgent.i
 sed -i 's/PromptDays=5/PromptDays=56/g' /etc/theftdeterrent/TDAgent.ini
 #sed -i 's/PromptTimes=15/PromptTimes=15/g' /etc/theftdeterrent/TDAgent.ini
 sed -i 's/Heartbeat_Interval=10/Heartbeat_Interval=1/g' /etc/theftdeterrent/TDAgent.ini
+echo COPIANDO ENLACES
+cp -R /media/USBBOOT/shorcouts/* /home/alumno/Escritorio/
+chmod 777 -R /home/alumno/Escritorio/*.desktop
+chmod +x -R /home/alumno/Escritorio/*.desktop
 echo FINALIZADO!!! 
