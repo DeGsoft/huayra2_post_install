@@ -73,6 +73,7 @@ for i in Descargas Música Documentos Imágenes Videos Vídeos; do
 				echo "Moviendo carpeta $i"
 				if [ -e "/media/DATOS/Mis Cosas/Descargas" ]; then
 					mv -f /home/alumno/$i/* "/media/DATOS/Mis Cosas/Descargas/"
+					rm -R /home/alumno/$i
 				else
 					mv -f /home/alumno/$i "/media/DATOS/Mis Cosas/Descargas"
 				fi;             
@@ -83,6 +84,7 @@ for i in Descargas Música Documentos Imágenes Videos Vídeos; do
                 echo "Moviendo carpeta $i"
 				if [ -e "/media/DATOS/Mis Cosas/Mi música" ]; then
 					mv -f /home/alumno/$i/* "/media/DATOS/Mis Cosas/Mi música/"
+					rm -R /home/alumno/$i
 				else
 					mv -f /home/alumno/$i "/media/DATOS/Mis Cosas/Mi música"
 				fi; 
@@ -93,6 +95,7 @@ for i in Descargas Música Documentos Imágenes Videos Vídeos; do
                 echo "Moviendo carpeta $i"
 				if [ -e "/media/DATOS/Mis Cosas/Mis documentos" ]; then
 					mv -f /home/alumno/$i/* "/media/DATOS/Mis Cosas/Mis documentos/"
+					rm -R /home/alumno/$i
 				else
 					mv -f /home/alumno/$i "/media/DATOS/Mis Cosas/Mis documentos"
 				fi;
@@ -103,6 +106,7 @@ for i in Descargas Música Documentos Imágenes Videos Vídeos; do
                 echo "Moviendo carpeta $i"
 				if [ -e "/media/DATOS/Mis Cosas/Mis imágenes" ]; then
 					mv -f /home/alumno/$i/* "/media/DATOS/Mis Cosas/Mis imágenes/"
+					rm -R /home/alumno/$i
 				else
 					mv -f /home/alumno/$i "/media/DATOS/Mis Cosas/Mis imágenes"
 				fi;
@@ -113,6 +117,7 @@ for i in Descargas Música Documentos Imágenes Videos Vídeos; do
                 echo "Moviendo carpeta $i"
 				if [ -e "/media/DATOS/Mis Cosas/Mis vídeos" ]; then
 					mv -f /home/alumno/$i/* "/media/DATOS/Mis Cosas/Mis vídeos/"
+					rm -R /home/alumno/$i
 				else
 					mv -f /home/alumno/$i "/media/DATOS/Mis Cosas/Mis vídeos"
 				fi;
@@ -123,6 +128,7 @@ for i in Descargas Música Documentos Imágenes Videos Vídeos; do
                 echo "Moviendo carpeta $i"
 				if [ -e "/media/DATOS/Mis Cosas/Mis vídeos" ]; then
 					mv -f /home/alumno/$i/* "/media/DATOS/Mis Cosas/Mis vídeos/"
+					rm -R /home/alumno/$i
 				else
 					mv -f /home/alumno/$i "/media/DATOS/Mis Cosas/Mis vídeos"
 				fi;
